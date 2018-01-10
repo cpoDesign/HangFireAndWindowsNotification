@@ -37,7 +37,7 @@ namespace ConsoleHangFireusing
             var stringElements = toastXml.GetElementsByTagName("text");
             for (int i = 0; i < stringElements.Length; i++)
             {
-                stringElements[i].AppendChild(toastXml.CreateTextNode("Line " + i));
+                stringElements[i].AppendChild(toastXml.CreateTextNode("Line " + DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString() ));
             }
 
             // Specify the absolute path to an image
